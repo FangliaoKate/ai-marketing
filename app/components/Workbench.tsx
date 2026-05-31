@@ -3,7 +3,6 @@
 import { useState, useRef } from 'react';
 import StepsUI from './StepsUI';
 import ModelSelector from './ModelSelector';
-import AIDecisionManifest from './AIDecisionManifest';
 import MultiTurnInput from './MultiTurnInput';
 import { CarModelId, CAR_MODEL_MAP, DemoConfig } from '../config';
 
@@ -169,10 +168,7 @@ export default function Workbench({
         </div>
       )}
 
-      {/* ── AI 决策标签面板 — 有激活标签时显示 ── */}
-      {showPostGenPanels && activeTagSet.size > 0 && (
-        <AIDecisionManifest activeTagSet={activeTagSet} />
-      )}
+
     </div>
   );
 }
